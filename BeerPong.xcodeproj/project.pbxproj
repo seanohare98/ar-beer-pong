@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1485B0BD255525A400F86FFF /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1485B0BC255525A400F86FFF /* Plane.swift */; };
 		14D0E1342549AD9E00336D2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D0E1332549AD9E00336D2D /* AppDelegate.swift */; };
 		14D0E1362549AD9E00336D2D /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 14D0E1352549AD9E00336D2D /* art.scnassets */; };
 		14D0E1382549AD9E00336D2D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D0E1372549AD9E00336D2D /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1485B0BC255525A400F86FFF /* Plane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
 		14D0E1302549AD9D00336D2D /* BeerPong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeerPong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14D0E1332549AD9E00336D2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14D0E1352549AD9E00336D2D /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -76,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1485B0BB2555259000F86FFF /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				1485B0BC255525A400F86FFF /* Plane.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
 		14D0E1272549AD9D00336D2D = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +109,7 @@
 		14D0E1322549AD9D00336D2D /* BeerPong */ = {
 			isa = PBXGroup;
 			children = (
+				1485B0BB2555259000F86FFF /* Objects */,
 				14D0E1332549AD9E00336D2D /* AppDelegate.swift */,
 				14D0E1352549AD9E00336D2D /* art.scnassets */,
 				14D0E1372549AD9E00336D2D /* ViewController.swift */,
@@ -260,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14D0E1382549AD9E00336D2D /* ViewController.swift in Sources */,
+				1485B0BD255525A400F86FFF /* Plane.swift in Sources */,
 				14D0E1342549AD9E00336D2D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +449,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V2CN3QNA8L;
 				INFOPLIST_FILE = BeerPong/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -455,6 +468,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V2CN3QNA8L;
 				INFOPLIST_FILE = BeerPong/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
