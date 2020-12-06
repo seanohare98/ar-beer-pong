@@ -19,26 +19,35 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rte-jz-RQP">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </arscnView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNr-a7-9Qk">
-                                <rect key="frame" x="117" y="605" width="171" height="163"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="ball_icon"/>
-                                <connections>
-                                    <action selector="onBallButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="hET-o6-DkI"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hV5-3l-I2L">
+                                <rect key="frame" x="77" y="76" width="261" height="114"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Score: ">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="34"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FTU-oB-cem"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="hV5-3l-I2L" firstAttribute="leading" secondItem="FTU-oB-cem" secondAttribute="leading" constant="77" id="8dP-rA-Pfi"/>
                             <constraint firstAttribute="bottom" secondItem="rte-jz-RQP" secondAttribute="bottom" id="MvH-pj-CQd"/>
                             <constraint firstItem="rte-jz-RQP" firstAttribute="trailing" secondItem="FTU-oB-cem" secondAttribute="trailing" id="UN8-N8-5cb"/>
+                            <constraint firstItem="FTU-oB-cem" firstAttribute="bottom" secondItem="hV5-3l-I2L" secondAttribute="bottom" constant="672" id="izV-jP-1kE"/>
                             <constraint firstItem="rte-jz-RQP" firstAttribute="top" secondItem="wXz-JW-8eU" secondAttribute="top" id="lUY-6W-nw7"/>
+                            <constraint firstItem="FTU-oB-cem" firstAttribute="trailing" secondItem="hV5-3l-I2L" secondAttribute="trailing" constant="76" id="mb0-pX-dmI"/>
+                            <constraint firstItem="hV5-3l-I2L" firstAttribute="top" secondItem="FTU-oB-cem" secondAttribute="top" constant="32" id="q83-aK-7cI"/>
                             <constraint firstItem="rte-jz-RQP" firstAttribute="leading" secondItem="FTU-oB-cem" secondAttribute="leading" id="zoy-46-Qeo"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="sceneView" destination="rte-jz-RQP" id="wUT-ub-iLw"/>
+                        <outlet property="scoreLabel" destination="hV5-3l-I2L" id="phR-0n-W0i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
@@ -47,7 +56,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ball_icon" width="717" height="750"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
