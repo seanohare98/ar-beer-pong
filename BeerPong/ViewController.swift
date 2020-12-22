@@ -3,7 +3,7 @@
 //  BeerPong
 //
 //  Created by Sean O'Hare on 10/28/20.
-// References:
+//  References:
 //              - https://www.appcoda.com/arkit-physics-scenekit/
 //              - https://github.com/l-priebe/Paper-Toss-AR
 //              - https://github.com/farice/ARShooter/
@@ -43,7 +43,6 @@ class ViewController: UIViewController, ARSCNViewDelegate, SCNPhysicsContactDele
         // Add tap gesture recognizer
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapped))
         sceneView.addGestureRecognizer(gestureRecognizer)
-        
         
         // Add pan gesture recognizer
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(panned))
@@ -155,16 +154,15 @@ class ViewController: UIViewController, ARSCNViewDelegate, SCNPhysicsContactDele
             ballNode?.position = position
             
             // Use velocity from UIPanGestureRecognizer to calculate normal
-            // Stolen from https://github.com/l-priebe/Paper-Toss-AR
             let velocity = sender.velocity(in: sceneView)
-            let norm = Float(sqrt(pow(velocity.x, 2) + pow(velocity.y, 2))) / 1000
+            let magnitude = Float(sqrt(pow(velocity.x, 2) + pow(velocity.y, 2))) / 1000
             
             // Apply outward force onto physics body
-            let outwardForce = SCNVector3(direction.x * norm, direction.y * norm, direction.z * norm)
+            let outwardForce = SCNVector3(direction.x * magnitude, direction.y * magnitude, direction.z * magnitude)
             ballNode?.physicsBody?.applyForce(outwardForce, asImpulse: true)
             
             // Apply upward force onto physics body
-            let upwardForce = SCNVector3(0, norm, 0)
+            let upwardForce = SCNVector3(0, magnitude, 0)
             ballNode?.physicsBody?.applyForce(upwardForce, asImpulse: true)
             
             // Score is currently measuring attempts so add 1 to the count per throw
@@ -196,7 +194,8 @@ class ViewController: UIViewController, ARSCNViewDelegate, SCNPhysicsContactDele
         if let plane = planes[planeAnchor] { plane.update(planeAnchor)}
     }
     
-    //MARK: - maths stolen from https://github.com/farice/ARShooter/blob/master/ARViewer/ViewController.swift#L191
+    // MARK: - Math
+    // Credit to https://github.com/farice/ARShooter
     func getUserVector() -> (SCNVector3, SCNVector3) { // (direction, position)
         if let frame = self.sceneView.session.currentFrame {
             // 4x4  transform matrix describing camera in world space
@@ -301,7 +300,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, SCNPhysicsContactDele
         // Reset tracking and/or remove existing anchors if consistent tracking is required
     }
 }
-//
+
 struct CollisionCategory: OptionSet {
     let rawValue: Int
     static let ball  = CollisionCategory(rawValue: 1 << 0)

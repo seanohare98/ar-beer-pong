@@ -3,7 +3,7 @@
 //  BeerPong
 //
 //  Created by Sean O'Hare on 11/6/20.
-// References:
+//  References:
 //              - https://www.appcoda.com/arkit-physics-scenekit/
 //              - https://github.com/l-priebe/Paper-Toss-AR
 //              - https://github.com/farice/ARShooter/
